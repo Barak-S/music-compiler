@@ -1,25 +1,57 @@
-import logo from './logo.svg';
 import './App.css';
+import bagelNoise1 from './audio/16.wav'
+import bagelNoise2 from './audio/13.mp3'
+import React from 'react';
+import MusicSelect from './MusicSelect'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component  {
+
+  state = {
+    musicArray: [
+      {
+        name: "Bagel Noise 1",
+        src: bagelNoise1
+      },
+      {
+        name: "Bagel Noise 2",
+        src: bagelNoise2
+      },
+      {
+        name: "Barak",
+        src: bagelNoise2
+      },
+      {
+        name: "Josh",
+        src: bagelNoise2
+      },
+      {
+        name: "Yeeeshh",
+        src: bagelNoise2
+      },
+    ]
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <h1>Barak and Josh worddd</h1>
+        <p>Were gonna play some music</p>
+        <div className="app-container">
+          <MusicSelect 
+            choice={"1"} 
+            song={this.state.musicArray}
+            musicArray={this.state.musicArray}
+          />
+          <MusicSelect 
+            choice={"2"} 
+            song={this.state.musicArray}
+            musicArray={this.state.musicArray}
+          />
+        </div>
+      </div>
+    );
+  }
+
 }
 
 export default App;

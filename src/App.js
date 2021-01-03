@@ -1,6 +1,8 @@
 import './App.css';
 import bagelNoise1 from './audio/16.wav'
 import bagelNoise2 from './audio/13.mp3'
+import BuildTrack from './audio/Build.wav'
+import AfroTrack from './audio/AfroSynth.wav'
 import React from 'react';
 import MusicSelect from './MusicSelect'
 
@@ -18,11 +20,11 @@ class App extends React.Component  {
       },
       {
         name: "Barak",
-        src: bagelNoise2
+        src: BuildTrack
       },
       {
         name: "Josh",
-        src: bagelNoise2
+        src: AfroTrack
       },
       {
         name: "Yeeeshh",
@@ -42,11 +44,11 @@ class App extends React.Component  {
             song={this.state.musicArray}
             musicArray={this.state.musicArray}
           />
-          <MusicSelect 
+          {/* <MusicSelect 
             choice={"2"} 
             song={this.state.musicArray}
             musicArray={this.state.musicArray}
-          />
+          /> */}
         </div>
       </div>
     );

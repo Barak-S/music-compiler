@@ -36,7 +36,7 @@ class Button extends Component {
             <div className="song-div">
                 <p style={{color: "#333"}}>{this.props.song.name}</p>
                 {/* <img style={{ height: 45, width: 45}} src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/12-512.png" onClick={()=>this.clickButton()}></img> */}
-                <img style={{ height: 45, width: 45}} src={!this.state.play ? "https://uxwing.com/wp-content/themes/uxwing/download/09-controller-and-music/red-play-button.png" : "https://cdn1.iconfinder.com/data/icons/color-bold-style/21/12-512.png" } onClick={()=>this.clickButton()}></img>
+                <img style={{ height: 45, width: 45}} src={this.audio.paused ? "https://uxwing.com/wp-content/themes/uxwing/download/09-controller-and-music/red-play-button.png" : "https://cdn1.iconfinder.com/data/icons/color-bold-style/21/12-512.png" } onClick={()=>this.clickButton()}></img>
             </div>
         );
     }

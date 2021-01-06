@@ -5,6 +5,8 @@ import BuildTrack from './audio/Build.wav'
 import AfroTrack from './audio/AfroSynth.wav'
 import React from 'react';
 import MusicSelect from './MusicSelect'
+// import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 
 class App extends React.Component  {
 
@@ -35,22 +37,18 @@ class App extends React.Component  {
 
   render(){
     return (
-      <div className="App">
-        <h1>Barak and Josh worddd</h1>
-        <p>Were gonna play some music</p>
-        <div className="app-container">
-          <MusicSelect 
-            choice={"1"} 
-            song={this.state.musicArray}
-            musicArray={this.state.musicArray}
-          />
-          {/* <MusicSelect 
-            choice={"2"} 
-            song={this.state.musicArray}
-            musicArray={this.state.musicArray}
-          /> */}
+        <div className="App">
+          <h1>Barak and Josh worddd</h1>
+          <p>Were gonna play some music</p>
+          <div className="app-container">
+            <MusicSelect 
+              choice={"1"} 
+              song={this.state.musicArray}
+              musicArray={this.state.musicArray}
+            />
+          </div>
+
         </div>
-      </div>
     );
   }
 

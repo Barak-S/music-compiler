@@ -5,7 +5,8 @@ import BuildTrack from './audio/Build.wav'
 import AfroTrack from './audio/AfroSynth.wav'
 import React from 'react';
 import MusicSelect from './MusicSelect'
-// import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import NavBar from './components/NavBar'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 class App extends React.Component  {
